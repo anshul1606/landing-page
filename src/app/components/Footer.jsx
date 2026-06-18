@@ -3,7 +3,7 @@ import{ useRef } from "react";
 import Image from "next/image";
 export default function Footer(){
     return(
-        <section className="py-13">
+        <section className="py-13 ">
         <div className="relative bg-black px-4 sm:px-8 lg:px-16 py-10 lg:py-20 flex flex-col lg:flex-row gap-10 overflow:hidden text-xl sm:text-sm lg:text-base">
             <Image src="/images/vector.png" alt="footer" className="absolute rounded-xl bottom-0 right-0 w-700 sm:w-70 lg:w-900 h-45 sm:h-70 lg:h-60 z-auto opacity-50 pointer-events-none" height={450} width={450}/>
             <div className="flex-1"> 

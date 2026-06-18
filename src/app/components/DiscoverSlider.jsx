@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import{ useState, useRef } from "react";
 import Image from "next/image";
 export default function DiscoverSlider(){
@@ -27,17 +28,18 @@ export default function DiscoverSlider(){
         <section className="py-16">
         <div>
                     <div className="flex justify-between items-center px-12">
-                        <h2 className="px-6 py-4 font-bold text-2xl">Discover</h2>  
+                        <h2 className="px-6 py-6 font-bold text-2xl">Discover</h2>  
                     </div>
-                    <div className="px-16 relative">  
+                    <motion.div                      
+                        className="px-16 relative">  
                       <div ref={sliderRef}
                       onScroll={handleScroll}
-                      className="flex overflow-x-auto gap-4 scroll-smooth snap-x snap-mandatory px-[10%] md:px-0 justify-start md:justify-start" style={{
+                      className="flex overflow-x-auto pt-4 gap-4 scroll-smooth snap-x snap-mandatory px-[10%] md:px-0 justify-start md:justify-start" style={{
                         scrollbarWidth: "none",
                         msOverflowStyle: "none",
                         }}>
-                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
-                            <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-50 cursor-pointer">
+                            <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl ">
                                 POLITICS  
                             </div>
                             <Image
@@ -48,7 +50,7 @@ export default function DiscoverSlider(){
                             <hr className="mt-4 border-gray-300"/>
                             <p className="p-2 font-semibold">The trump Administration is using memes to turn mass deportation into Big Joke</p>
                         </div>
-                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-50 cursor-pointer">
                         <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl">
                             SECURITY
                         </div>
@@ -59,8 +61,8 @@ export default function DiscoverSlider(){
                             <p className="p-2 font-semibold">Data Brokers face new pressure for hiding opt-out pages from google</p>
                             <hr className="mt-4 border-gray-300"/>
                             <p className="p-2 font-semibold">Data Brokers are hiding their opt-out pages from google</p>
-                    </div>  
-                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                        </div>  
+                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-gray-50 cursor-pointer">
                         <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl">
                             SCIENCE
                         </div>    
@@ -72,7 +74,7 @@ export default function DiscoverSlider(){
                             <hr className="mt-4 border-gray-300"/>
                             <p className="p-2 font-semibold">Data Brokers are hiding their opt-out pages from google</p>
                     </div>
-                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all duration-300 hover:translate-y-2 hover:shadow-2xl hover:bg-gray-50 cursor-pointer">
                         <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl">
                             SCIENCE
                         </div>
@@ -84,7 +86,7 @@ export default function DiscoverSlider(){
                             <hr className="mt-4 border-gray-300"/>
                             <p className="p-2 font-semibold">Data Brokers are hiding their opt-out pages from google</p>
                     </div>
-                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all duration-300 hover:translate-y-2 hover:shadow-2xl hover:bg-gray-50 cursor-pointer">
                         <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl">
                             SCIENCE
                         </div>
@@ -96,7 +98,7 @@ export default function DiscoverSlider(){
                             <hr className="mt-4 border-gray-300"/>
                             <p className="p-2 font-semibold">Data Brokers are hiding their opt-out pages from google</p>
                     </div>  
-                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all duration-300 hover:translate-y-2 hover:shadow-2xl hover:bg-gray-50 cursor-pointer">
                         <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl">
                             SCIENCE
                         </div>
@@ -108,7 +110,7 @@ export default function DiscoverSlider(){
                             <hr className="mt-4 border-gray-300"/>
                             <p className="p-2 font-semibold">Data Brokers are hiding their opt-out pages from google</p>
                     </div> 
-                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all duration-300 hover:translate-y-2 hover:shadow-2xl hover:bg-gray-50 cursor-pointer">
                         <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl">
                             SCIENCE
                         </div>
@@ -119,7 +121,7 @@ export default function DiscoverSlider(){
                             <hr className="mt-4 border-gray-300"/>
                             <p className="p-2 font-semibold">Data Brokers are hiding their opt-out pages from google</p>
                     </div> 
-                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                    <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all duration-300 hover:translate-y-2 hover:shadow-2xl hover:bg-gray-50 cursor-pointer">
                         <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl">
                             POLITICS
                         </div>
@@ -142,7 +144,7 @@ export default function DiscoverSlider(){
                                   src="/images/right-arrow.png" alt="rightarrow" height={20} width={20} className="hover:bg-gray-400 rounded-full"/>
                             </button>
                         
-                    </div>
+                    </motion.div>
                     <div className="flex justify-center gap-2 mt-4 md:hidden">
                         {[...Array(8)].map((_, index) => (
                             <span
@@ -155,7 +157,7 @@ export default function DiscoverSlider(){
                             />
                         ))}
                     </div>
-        </div>
+        </div>  
     </section>
     );
 }

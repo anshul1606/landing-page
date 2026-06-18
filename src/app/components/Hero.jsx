@@ -1,7 +1,13 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 export default function Hero(){
     return(
-        <div>
+        <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 2 }}
+        transition={{ duration: 2 }}
+        >
             <div className="px-4 md:px-8 lg:px-12 py-3 text-sm text-gray-500">Home / Blogs / Blog 1
                 <div className="py-4 px-12">
                     <Image src="/images/image1.png" alt="img" height={800} width={1400} className="w-full h-auto rounded-xl"/>
@@ -74,6 +80,6 @@ export default function Hero(){
                 </div>
             </div>
         </div>
-    </div>
+    </motion.div>
     );
 }

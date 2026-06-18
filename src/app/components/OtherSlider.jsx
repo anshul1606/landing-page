@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import { useState, useRef, Children } from "react";
 import Image from "next/image";
   export default function OtherSlider(){
@@ -38,15 +39,16 @@ import Image from "next/image";
                         <p className = "text-gray-600">Lorem ipsum dolor sit amet consectetur. Sapien congue sed nulla leo fringilla.</p>
                             
                     </div>
-                <div className="px-16 relative">
-                    <div ref={sliderRef} onScroll={handleScroll} className="flex overflow-x-auto bg-transparent gap-4 snap-x snap-mandatory px-[10%] md:px-0 justify-start md:justify-start" style={{
+                <motion.div className="px-16 relative">
+                    <div ref={sliderRef} onScroll={handleScroll} className="flex overflow-x-auto pb-4 bg-transparent gap-4 snap-x snap-mandatory px-[10%] md:px-0 justify-start md:justify-start" style={{
                         scrollbarWidth: "none",
                         msOverflowStyle: "none",
                     }}>
-                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all hover:translate-y-2 hover:shadow-2xl hover:bg-gray-100 cursor-pointer">
                             <Image 
                             src="/images/cardb1.png" alt="card1" className="p-4" height={400} width={400}/>
-                            <h1 className="text-2xl font-bold">Lorem ipsum dolor sit amet</h1>
+                            <h1 className="text-2xl font-bold cursor-pointer flex justify-between items-center">Lorem ipsum dolor sit amet
+                            </h1>
                             <p className="p-2">XAI was about to land a major goverment contract. Then Grok Praised Hitler
                             Christian Millitants Are using instagram to recurit-and becoming influencers in the process
                             The trump Administration is using memes to turn mass deportation into Big Joke</p>
@@ -57,7 +59,7 @@ import Image from "next/image";
         
                             </div>
                         </div>
-                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all hover:translate-y-2 hover:shadow-2xl hover:bg-gray-100 cursor-pointer">
                             <Image 
                             src="/images/cardb2.png" alt="card1" className="p-4" height={350} width={350}/>
                             <h1 className="text-2xl font-bold">Lorem ipsum dolor sit amet</h1>
@@ -71,7 +73,7 @@ import Image from "next/image";
 
                             </div>
                         </div>
-                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all hover:translate-y-2 hover:shadow-2xl hover:bg-gray-100 cursor-pointer">
                             <Image
                              src="/images/cardb3.png" alt="card1" className="p-4" height={350} width={350}/>
                             <h1 className="text-2xl font-bold">Lorem ipsum dolor sit amet</h1>
@@ -85,7 +87,7 @@ import Image from "next/image";
 
                             </div>
                         </div>
-                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all hover:translate-y-2 hover:shadow-2xl hover:bg-gray-100 cursor-pointer">
                             <Image
                              src="/images/cardb3.png" alt="card1" className="p-4" height={350} width={350}/>
                             <h1 className="text-2xl font-bold">Lorem ipsum dolor sit amet</h1>
@@ -99,7 +101,7 @@ import Image from "next/image";
 
                             </div>
                         </div>
-                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all hover:translate-y-2 hover:shadow-2xl hover:bg-gray-100 cursor-pointer">
                             <Image src="/images/cardb2.png" alt="card1" className="p-4" height={350} width={350}/>
                             <h1 className="text-2xl font-bold">Lorem ipsum dolor sit amet</h1>
                             <p className="p-2">XAI was about to land a major goverment contract. Then Grok Praised Hitler
@@ -111,7 +113,7 @@ import Image from "next/image";
                                 <p className ="ml-auto">Jume 2025</p>
                             </div>
                         </div>
-                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all hover:translate-y-2 hover:shadow-2xl hover:bg-gray-100 cursor-pointer">
                             <Image src="/images/cardb1.png" alt="card1" className="p-4" height={350} width={350}/>
                             <h1 className="text-2xl font-bold">Lorem ipsum dolor sit amet</h1>
                             <p className="p-2"> XAI was about to land a major goverment contract. Then Grok Praised Hitler
@@ -124,7 +126,7 @@ import Image from "next/image";
 
                             </div>
                         </div>
-                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all hover:translate-y-2 hover:shadow-2xl hover:bg-gray-100 cursor-pointer">
                             <Image 
                             src="/images/cardb1.png" alt="card1" className="p-4" height={350} width={350}/>
                             <h1 className="text-2xl font-bold">Lorem ipsum dolor sit amet</h1>
@@ -148,7 +150,7 @@ import Image from "next/image";
                                 <Image 
                                 src="/images/right-arrow.png" alt="rightarrow" height={20} width={20}/>
                             </button>
-                </div>
+                </motion.div>
                 <div className="flex justify-center gap-2 mt-4 md:hidden">
                     {[...Array(7)].map((_,index)=>(
                         <span
