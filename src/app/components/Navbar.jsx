@@ -5,8 +5,8 @@ export default function Navbar  (){
     const[menuOpen, setMenuOpen]=useState(false)
     
     return(
-        <div className="realtive">
-            <nav className="bg-blue-600 flex gap-5 text-white shadow-lg p-2">
+        <div className="w-full">
+            <nav className="bg-blue-600 flex items-center justify-between text-white shadow-lg px-4 py-2">
                 <button
                     className="lg:hidden text-3xl"
                     onClick={() => setMenuOpen(!menuOpen)}>
@@ -22,7 +22,7 @@ export default function Navbar  (){
                     <Image
                     src="/images/nav-logo2.png" alt = "image2" width={70} height={50} className="sm:h-11 h-8 hover:opacity-90 transition-opacity brightness-125"/>
                 </div>
-                    <div className="hidden lg:flex items-center gap-6">
+                    <div className="hidden lg:flex items-center gap-6 ml-auto">
                         <div className="flex flex-row justify-between items-start gap-4 lg:gap-8 py-3">
                             
                             <div className="font-semibold">
@@ -50,7 +50,7 @@ export default function Navbar  (){
                     
             </nav>
             {menuOpen && (
-            <div className="lg:hidden absolute top-[52px] left-0 w-full bg-blue-500 shadow-lg z-50">
+            <div className="lg:hidden top-[52px] left-0 w-full bg-blue-500 shadow-lg z-50">
                 <div className="flex flex-col gap-4 px-4 py-4">
                 <div>
                     Buy In

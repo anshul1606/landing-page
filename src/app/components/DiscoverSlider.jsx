@@ -34,7 +34,7 @@ export default function DiscoverSlider(){
                         className="px-16 relative">  
                       <div ref={sliderRef}
                       onScroll={handleScroll}
-                      className="flex overflow-x-auto pt-4 gap-4 scroll-smooth snap-x snap-mandatory px-[10%] md:px-0 justify-start md:justify-start" style={{
+                      className="flex overflow-x-auto gap-4 scroll-smooth snap-x snap-mandatory px-[10%] md:px-0 justify-start md:justify-start" style={{
                         scrollbarWidth: "none",
                         msOverflowStyle: "none",
                         }}>

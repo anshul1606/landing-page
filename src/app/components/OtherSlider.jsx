@@ -37,7 +37,6 @@ import Image from "next/image";
                         
                     <div className = "flex justify-between items-center px-17">
                         <p className = "text-gray-600">Lorem ipsum dolor sit amet consectetur. Sapien congue sed nulla leo fringilla.</p>
-                            
                     </div>
                 <motion.div className="px-16 relative">
                     <div ref={sliderRef} onScroll={handleScroll} className="flex overflow-x-auto pb-4 bg-transparent gap-4 snap-x snap-mandatory px-[10%] md:px-0 justify-start md:justify-start" style={{
@@ -73,7 +72,7 @@ import Image from "next/image";
 
                             </div>
                         </div>
-                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all hover:translate-y-2 hover:shadow-2xl hover:bg-gray-100 cursor-pointer">
+                        <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 transition-all hover:translate-y-2 hover:shadow-2xl hover:bg-gray-50 cursor-pointer">
                             <Image
                              src="/images/cardb3.png" alt="card1" className="p-4" height={350} width={350}/>
                             <h1 className="text-2xl font-bold">Lorem ipsum dolor sit amet</h1>

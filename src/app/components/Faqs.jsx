@@ -34,16 +34,19 @@ export default function Faqs(){
                 className="w-full flex justify-between items-center p-4 font-semibold"
                 >
                 {faq.question}
-                <span>
-                    {openIndex === index ? "-" : "+"}
+                <span className={`text-2xl font-bold transition-transform duration-300 ${
+                    openIndex === index ? "rotate-45" : "rotate-0"
+                }`}>+
                 </span>
                 </button>
-
-                {openIndex === index && (
-                <div className="p-4 bg-gray-50">
-                    {faq.answer}
-                </div>
-                )}
+                <div
+                 className={`overflow-hidden transition-all duration-600 ease-in-out px-4 ${
+                    openIndex === index
+                    ? "max-h-40 opacity-100"
+                    : "max-h-0 opacity-0"
+                    }`}>
+                    <p className="bg-gray-50"> {faq.answer}</p>
+                    </div>
         </div>
     ))}
   </div>
