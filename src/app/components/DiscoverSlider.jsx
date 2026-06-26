@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import{ useState, useRef } from "react";
 import Image from "next/image";
+import SectionReveal from "./ScrollReveal";
 export default function DiscoverSlider(){
     const [activeIndex, setActiveIndex] = useState(0);
     const sliderRef = useRef(null);
@@ -25,21 +26,22 @@ export default function DiscoverSlider(){
         });
     };
     return(
+        <SectionReveal>
             <section className="py-16">
                 <div>
                     <div className="flex justify-between items-center px-12">
-                        <h2 className="px-6 py-6 font-bold text-2xl">Discover</h2>  
+                        <h2 className="px-6 py-6 font-bold text-2xl text-gray-900 dark:text-white">Discover</h2>  
                     </div>
                     <motion.div                      
                         className="px-16 relative">  
                         <div ref={sliderRef}
                         onScroll={handleScroll}
-                        className="flex overflow-x-auto gap-4 scroll-smooth px-[10%] md:px-0 justify-start md:justify-start" style={{
+                        className="flex overflow-x-auto gap-4 scroll-smooth px-[0%] md:px-0 justify-start md:justify-start" style={{
                             scrollbarWidth: "none",
                             msOverflowStyle: "none",
                             }}>
                             <div className="flex-none w-[85%] md:w-[50%] lg:w-[25%] snap-center shrink-0 ">
-                                <div className="inline-flex px-6 py-2 bg-black text-white rounded-2xl transition-all duration-300 hover:translate-y-2 mb-2">
+                                <div className="inline-flex px-6 py-2 bg-black text-white dark:bg-white dark:text-black rounded-2xl transition-all duration-300 hover:translate-y-2 mb-2">
                                     POLITICS  
                                 </div>
                                 <div className="bg-white rounded-2xl p-3 transition-all hover:-translate-y-2 hover:shadow-sm hover:bg-gray-100 cursor-pointer ">
@@ -174,5 +176,6 @@ export default function DiscoverSlider(){
                     </div>
                 </div>  
             </section>
+        </SectionReveal>
         );
     }

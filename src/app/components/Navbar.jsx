@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 export default function Navbar  (){
     const[menuOpen, setMenuOpen]=useState(false)
     
     return(
         <div className="w-full">
-            <nav className="bg-blue-600 flex items-center justify-between text-white shadow-lg px-4 py-2">
+            <nav className="bg-blue-600 dark:bg-slate-900 text-white dark:text-gray-100 flex items-center justify-between shadow-lg px-4 py-2 transition-colors duration-300">
                 <button
                     className="lg:hidden text-3xl"
                     onClick={() => setMenuOpen(!menuOpen)}>
@@ -23,34 +24,35 @@ export default function Navbar  (){
                     src="/images/nav-logo2.png" alt = "image2" width={70} height={50} className="sm:h-11 h-8 hover:opacity-90 transition-opacity brightness-125"/>
                 </div>
                     <div className="hidden lg:flex items-center gap-6 ml-auto">
-                        <div className="flex flex-row justify-between items-start gap-4 lg:gap-8 py-3">
-                            
+                        <div className="flex flex-row justify-between items-start gap-4 lg:gap-8 py-3"> 
                             <div className="font-semibold">
                                 Buy In
-                                <select className="bg-transparent border-none outline-none">
+                                <select className="bg-auto border-none outline-none">
                                 <option>Gurgaon</option>
                                 <option>City 2</option>
                                 <option>City 3</option>
                                 <option>City 4</option>
                                 </select>
                             </div>
-                            <div className="flex items-center gap-3 bg-white rounded-full p-3">
+                            <div className="flex items-center gap-3 bg-white dark:bg-slate-800 rounded-full p-3 transition-colors duration-300">
                                     <div className="inline-flex items-center px-5 py-2 bg-blue-500 text-white rounded-full">
                                     <span className="mr-2">Gurugram</span>
                                     <span>&times;</span>
                                     </div>
 
-                                    <button className="px-6 py-2 border border-blue-500 text-blue-500 rounded-full">
+                                    <button className="px-6 py-2 border border-blue-500 dark:border-blue-400 text-blue-500 dark:text-blue-300 rounded-full hover:bg-blue-50 dark:hover:bg-slate-700 transition">
                                     + Add
                                     </button>
-                                </div>
-
+                            </div>
                         </div>
+                    </div>
+                    <div className="px-3">
+                        <ThemeToggle />
                     </div>
                     
             </nav>
             {menuOpen && (
-            <div className="lg:hidden top-[52px] left-0 w-full bg-blue-500 shadow-lg z-50">
+            <div className="lg:hidden top-[52px] left-0 w-full bg-blue-500 dark:bg-slate-900 shadow-lg z-50 transition-colors duration-300">
                 <div className="flex flex-col gap-4 px-4 py-4">
                 <div>
                     Buy In
@@ -68,7 +70,7 @@ export default function Navbar  (){
                             <span className="cursor-pointer">&times;</span>
                         </div>
 
-                        <button className="px-6 py-2 border border-blue-500 text-blue-500 rounded-full font-semibold hover:bg-gray-100">
+                        <button className="px-6 py-2 border border-blue-500 dark:border-blue-400 text-blue-500 dark:text-blue-300 rounded-full font-semibold hover:bg-gray-100 dark:hover:bg-slate-700 transition">
                             + Add
                         </button>
 
@@ -77,7 +79,7 @@ export default function Navbar  (){
                 <Image
                 src="/images/nav-logo3.png" alt="image3" width={100} height={100}/>
             </button>
-            <button className="bg-white text-blue-600 px-4 py-2 rounded-lg">
+            <button className="bg-white dark:bg-blue-500 text-blue-600 dark:text-white px-4 py-2 rounded-lg transition">
             Get Started
             </button>
             </div>

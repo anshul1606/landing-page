@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useState, useRef, Children } from "react";
 import Image from "next/image";
+import SectionReveal from "./ScrollReveal";
   export default function OtherSlider(){
     const [activeIndex, setActiveIndex] = useState(0); 
     const sliderRef = useRef(null);
@@ -28,6 +29,7 @@ import Image from "next/image";
     };
     
     return(
+        <SectionReveal>
         <div>
                     <h2 className = "font-semibold text-2xl px-16 py-3">Others
                         <button className="font-normal ml-auto flex bg-black text-white rounded-xl px-6">
@@ -39,7 +41,7 @@ import Image from "next/image";
                         <p className = "text-gray-600">Lorem ipsum dolor sit amet consectetur. Sapien congue sed nulla leo fringilla.</p>
                     </div>
                 <motion.div className="px-16 relative">
-                    <div ref={sliderRef} onScroll={handleScroll} className="flex overflow-x-auto pb-4 rounded-2xl bg-transparent gap-4 snap-x snap-mandatory px-[10%] md:px-0 justify-start md:justify-start" style={{
+                    <div ref={sliderRef} onScroll={handleScroll} className="flex overflow-x-auto pb-4 rounded-2xl bg-transparent gap-4 snap-x snap-mandatory px-[0%] md:px-0 justify-start md:justify-start" style={{
                         scrollbarWidth: "none",
                         msOverflowStyle: "none",
                     }}>
@@ -163,5 +165,6 @@ import Image from "next/image";
                     ))}
                 </div>
         </div>
+    </SectionReveal>
     );
   }

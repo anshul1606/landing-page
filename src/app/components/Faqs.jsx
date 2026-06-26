@@ -46,7 +46,7 @@ export default function Faqs(){
                     ? "max-h-96 opacity-100"
                     : "max-h-0 opacity-0"
                     }`}>
-                    <p className="px-5 pb-5 lolbg-gray-50"> {faq.answer}</p>
+                    <p className="px-5 pb-5 bg-gray-50"> {faq.answer}</p>
                     <hr className="mt-4 border-gray-300"/>
                     
                 </div>
